@@ -12,7 +12,7 @@
   }
   addEventListener('resize', resize); resize();
 
-  const HINTS = ['D-PAD: MOVE    A: JUMP', 'B: DASH   HOLD A DIRECTION TO AIM IT', 'JUMP AGAIN AGAINST A WALL', 'A DASH BURNS THROUGH HAY', 'LANTERNS RELIGHT YOUR DASH'];
+  const HINTS = ['D-PAD: MOVE    A: JUMP', 'B: DASH   HOLD A DIRECTION TO AIM IT', 'IN THE AIR AT A WALL: PRESS A TO KICK OFF IT', 'A DASH BURNS THROUGH HAY', 'LANTERNS RELIGHT YOUR DASH'];
   // A run (room, deaths, frames, cin) starts over with a new game; the album and the best time are kept.
   const fresh = (old) => ({ room: 0, deaths: 0, frames: 0, cin: [], best: old ? old.best : null, album: old ? old.album : [] });
   let save = fresh();
