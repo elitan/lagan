@@ -53,7 +53,7 @@ Play it at https://elitan.github.io/lagan/, or run it yourself. There is nothing
 ```sh
 git clone https://github.com/elitan/lagan
 cd lagan
-python3 -m http.server 8777     # then open http://localhost:8777
+python3 tools/serve.py          # then open http://localhost:8777
 ```
 
 ## How it is made
@@ -68,6 +68,7 @@ backdrop and note of music is made in code.
 | `src/render.js` | The seasons and everything drawn in them |
 | `src/audio.js` | Sound effects, and a polska for each season |
 | `src/main.js` | The loop, the screens, saving |
+| `tools/serve.py` | A local server that never lets the browser cache a file |
 | `tools/solve.js` | Proves every room can be finished, with and without its album item |
 
 `node tools/solve.js` plays every room with the real game rules and fails if one cannot be finished. Run it after
