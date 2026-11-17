@@ -3,6 +3,8 @@
 <p align="center"><b>En liten låga. Ett svenskt år.</b><br>
 A small flame carried home through a Swedish year: a precision platformer for a NES controller, played in the browser.</p>
 
+<p align="center"><a href="https://elitan.github.io/lagan/"><b>▶ Play it in your browser</b></a></p>
+
 <p align="center"><img src="docs/title.png" alt="The title screen of Lågan" width="728"></p>
 
 Jump, wall jump and dash through fourteen rooms and four seasons, from the first coltsfoot of spring to the
@@ -46,7 +48,7 @@ because these pads number their buttons differently.
 
 ## Run it
 
-There is nothing to install and nothing to build.
+Play it at https://elitan.github.io/lagan/, or run it yourself. There is nothing to install and nothing to build.
 
 ```sh
 git clone https://github.com/elitan/lagan
