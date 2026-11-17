@@ -213,12 +213,16 @@
       } else if (c === SPR && p.vy >= 0 && hit(p, px, py + 4, 8, 4)) {
         p.vy = -SPRING; p.ry = 0; p.dashT = 0; p.dashes = 1; p.varJ = false; p.coy = 0;
         st.ev.push({ k: 'spring', x: tx, y: ty });
-      } else if (c === CRYS && st.crys[room.dyn[i]] === 0 && p.dashes < 1) {
-        p.dashes = 1; st.crys[room.dyn[i]] = -150;
-        st.ev.push({ k: 'crystal', x: tx, y: ty });
       } else if (c === CIN && !st.cin[room.dyn[i]]) {
         st.cin[room.dyn[i]] = 1;
         st.ev.push({ k: 'cinder', x: tx, y: ty });
+      }
+    }
+    for (let k = 0; k < room.crys.length; k++) { // a lantern is picked up from 3 px outside its tile
+      const tx = room.crys[k] % W, ty = (room.crys[k] / W) | 0;
+      if (st.crys[k] === 0 && p.dashes < 1 && hit(p, tx * T - 3, ty * T - 3, T + 6, T + 6)) {
+        p.dashes = 1; st.crys[k] = -150;
+        st.ev.push({ k: 'crystal', x: tx, y: ty });
       }
     }
     if (p.vy >= 0 && collide(st, p.x, p.y + 1)) { // standing on crumbling stone starts it shaking
