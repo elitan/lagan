@@ -209,7 +209,7 @@
   }
 
   function drawRoom() {
-    const p = st.p, pal = art.pal, ch = LEVELS[idx].ch, off = Math.round((p.x / (W * T)) * 16);
+    const p = st.p, pal = art.pal, ch = LEVELS[idx].ch, off = 8; // the backdrop is 16 px wider than the screen and stays still
     const sx = shake ? Math.round((Math.random() - 0.5) * shake) : 0, sy = shake ? Math.round((Math.random() - 0.5) * shake) : 0;
     ctx.drawImage(art.bg, -off, 0);
     if (ch === 3) gfx.aurora(ctx, time, idx === 12 ? 1.5 : 0.7);
